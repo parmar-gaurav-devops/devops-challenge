@@ -1,0 +1,43 @@
+## DevOps challenge
+
+First of all thanks for being part of this process :)
+
+## Entering the Matrix.
+
+Hello NEO.
+
+We have a Rails application that says Hello world! But is becoming really popular.
+Our old infrastructure run in EC2 machines but the maintenance of this is really hard for us.
+We hear that we can use containers in order to build and ship our application in a fast and safe way.
+
+You should choose between two pills:
+
+[The red pill]: You can take the control of the Matrix and run the containers under self managed AWS EC2/GCP VM instances.
+
+[The blue pill]: You take this and you wake up using AWS Fargate/GCP Cloud Run.
+
+Please explain the reason for your decision.
+After you take a choice, please complete the following tasks.
+
+1. Create the infrastructure and the pipeline needed in order to serve our application from AWS/GCP containers.
+2. Host our database in AWS RDS/ GCP SQL and import the current data (/db/database.sql).
+3. Create a script that easy deploy new code to the stack.
+4. Set autoscaling policies in order to have a minimum of 1 task, a desired of 1, and a maximum of 10 based on the CPU usage.
+5. Add some simple observability solution where we can monitor the app: APM or logs or both if you have the time.
+
+## Application details:
+
+* Ruby version: 2.3.x
+* Rails version: 4.2
+* Postgres version :11.6
+
+Database configuration: config/database.yml
+Update your host.
+username: admin
+password: admin
+db name: hello_world
+
+## Test your results
+
+Is everithing is ok the route /hello_world will return the following respose:
+{"id":1,"text":"Hello World!"}
